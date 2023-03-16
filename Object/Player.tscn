@@ -1,0 +1,196 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://Import/player1/Idle/Idle_009.png" type="Texture" id=1]
+[ext_resource path="res://Script/game player.gd" type="Script" id=2]
+[ext_resource path="res://Import/yc.png" type="Texture" id=3]
+[ext_resource path="res://shader/glowshader.shader" type="Shader" id=4]
+[ext_resource path="res://Import/player1/Walking/Walking_010.png" type="Texture" id=5]
+[ext_resource path="res://Import/player1/Walking/Walking_003.png" type="Texture" id=6]
+[ext_resource path="res://Import/player1/Walking/Walking_004.png" type="Texture" id=7]
+[ext_resource path="res://Import/player1/Walking/Walking_006.png" type="Texture" id=8]
+[ext_resource path="res://Import/player1/Walking/Walking_007.png" type="Texture" id=9]
+[ext_resource path="res://Import/player1/Walking/Walking_005.png" type="Texture" id=10]
+[ext_resource path="res://Import/player1/Walking/Walking_008.png" type="Texture" id=11]
+[ext_resource path="res://Import/player1/Walking/Walking_009.png" type="Texture" id=12]
+[ext_resource path="res://Import/player1/Walking/Walking_019.png" type="Texture" id=13]
+[ext_resource path="res://Import/player1/Walking/Walking_018.png" type="Texture" id=14]
+[ext_resource path="res://Import/player1/Walking/Walking_023.png" type="Texture" id=15]
+[ext_resource path="res://Import/player1/Walking/Walking_015.png" type="Texture" id=16]
+[ext_resource path="res://Import/player1/Walking/Walking_011.png" type="Texture" id=17]
+[ext_resource path="res://Import/player1/Walking/Walking_017.png" type="Texture" id=18]
+[ext_resource path="res://Import/player1/Walking/Walking_021.png" type="Texture" id=19]
+[ext_resource path="res://Import/player1/Walking/Walking_022.png" type="Texture" id=20]
+[ext_resource path="res://Import/player1/Walking/Walking_020.png" type="Texture" id=21]
+[ext_resource path="res://Import/player1/Walking/Walking_013.png" type="Texture" id=22]
+[ext_resource path="res://Import/player1/Walking/Walking_016.png" type="Texture" id=23]
+[ext_resource path="res://Import/player1/Walking/Walking_012.png" type="Texture" id=24]
+[ext_resource path="res://Import/player1/Walking/Walking_014.png" type="Texture" id=25]
+[ext_resource path="res://Import/player1/Walking/Walking_000.png" type="Texture" id=26]
+[ext_resource path="res://Import/player1/Walking/Walking_002.png" type="Texture" id=27]
+[ext_resource path="res://Import/player1/Walking/Walking_001.png" type="Texture" id=28]
+[ext_resource path="res://Import/player1/Idle/Idle_010.png" type="Texture" id=29]
+[ext_resource path="res://Import/player1/Idle/Idle_011.png" type="Texture" id=30]
+[ext_resource path="res://Import/player1/Idle/Idle_016.png" type="Texture" id=31]
+[ext_resource path="res://Import/player1/Idle/Idle_017.png" type="Texture" id=32]
+[ext_resource path="res://Import/player1/Idle/Idle_012.png" type="Texture" id=33]
+[ext_resource path="res://Import/player1/Idle/Idle_015.png" type="Texture" id=34]
+[ext_resource path="res://Import/player1/Idle/Idle_013.png" type="Texture" id=35]
+[ext_resource path="res://Import/player1/Idle/Idle_014.png" type="Texture" id=36]
+[ext_resource path="res://Import/player1/Idle/Idle_008.png" type="Texture" id=37]
+[ext_resource path="res://Import/player1/Idle/Idle_007.png" type="Texture" id=38]
+[ext_resource path="res://Import/player1/Idle/Idle_001.png" type="Texture" id=39]
+[ext_resource path="res://Import/player1/Idle/Idle_005.png" type="Texture" id=40]
+[ext_resource path="res://Import/player1/Idle/Idle_000.png" type="Texture" id=41]
+[ext_resource path="res://Import/player1/Idle/Idle_002.png" type="Texture" id=42]
+[ext_resource path="res://Import/player1/Idle/Idle_003.png" type="Texture" id=43]
+[ext_resource path="res://Import/player1/Idle/Idle_004.png" type="Texture" id=44]
+[ext_resource path="res://Import/player1/Idle/Idle_006.png" type="Texture" id=45]
+
+[sub_resource type="SpriteFrames" id=55]
+resource_local_to_scene = true
+animations = [ {
+"frames": [ ExtResource( 41 ), ExtResource( 39 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 40 ), ExtResource( 45 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 1 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 23 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "move",
+"speed": 15.0
+} ]
+
+[sub_resource type="CircleShape2D" id=54]
+radius = 12.0
+
+[sub_resource type="ShaderMaterial" id=91]
+shader = ExtResource( 4 )
+
+[sub_resource type="Animation" id=93]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=94]
+resource_name = "be_attacked"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 10 ), Vector2( -10, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -22 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 55 )
+animation = "Idle"
+frame = 17
+speed_scale = 2.0
+playing = true
+offset = Vector2( 0, -28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2, -5 )
+shape = SubResource( 54 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+smoothing_enabled = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color( 0.831373, 0.831373, 0.831373, 0.815686 )
+show_behind_parent = true
+material = SubResource( 91 )
+position = Vector2( -1.52588e-05, 7.62939e-06 )
+rotation = 0.785398
+scale = Vector2( 0.75, 0.75 )
+amount = 10
+lifetime = 0.5
+local_coords = false
+texture = ExtResource( 3 )
+emission_shape = 1
+emission_sphere_radius = 13.61
+direction = Vector2( 0, 0 )
+gravity = Vector2( 0, 0 )
+initial_velocity = 15.0
+scale_amount = 0.1
+scale_amount_random = 0.62
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 93 )
+anims/be_attacked = SubResource( 94 )
