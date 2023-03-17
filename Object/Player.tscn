@@ -1,9 +1,7 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Import/player1/Idle/Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://Script/game player.gd" type="Script" id=2]
-[ext_resource path="res://Import/yc.png" type="Texture" id=3]
-[ext_resource path="res://shader/glowshader.shader" type="Shader" id=4]
 [ext_resource path="res://Import/player1/Walking/Walking_010.png" type="Texture" id=5]
 [ext_resource path="res://Import/player1/Walking/Walking_003.png" type="Texture" id=6]
 [ext_resource path="res://Import/player1/Walking/Walking_004.png" type="Texture" id=7]
@@ -63,8 +61,8 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=54]
 radius = 12.0
 
-[sub_resource type="ShaderMaterial" id=91]
-shader = ExtResource( 4 )
+[sub_resource type="Animation" id=95]
+resource_name = "Idle"
 
 [sub_resource type="Animation" id=93]
 length = 0.001
@@ -150,14 +148,12 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -22 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 55 )
 animation = "Idle"
-frame = 17
+frame = 12
 speed_scale = 2.0
 playing = true
 offset = Vector2( 0, -28 )
@@ -174,14 +170,12 @@ smoothing_enabled = true
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 modulate = Color( 0.831373, 0.831373, 0.831373, 0.815686 )
 show_behind_parent = true
-material = SubResource( 91 )
 position = Vector2( -1.52588e-05, 7.62939e-06 )
 rotation = 0.785398
 scale = Vector2( 0.75, 0.75 )
 amount = 10
 lifetime = 0.5
 local_coords = false
-texture = ExtResource( 3 )
 emission_shape = 1
 emission_sphere_radius = 13.61
 direction = Vector2( 0, 0 )
@@ -192,5 +186,6 @@ scale_amount_random = 0.62
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../..")
+anims/Idle = SubResource( 95 )
 anims/RESET = SubResource( 93 )
 anims/be_attacked = SubResource( 94 )
