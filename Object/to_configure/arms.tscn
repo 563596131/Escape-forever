@@ -1,0 +1,80 @@
+{
+    "type": {
+        "Spear": "res://Object/arm_1.tscn",
+        "Sword": "res://Object/arm_2.tscn",
+        "Axe": "res://Object/arm_4.tscn",
+        "Staves": "res://Object/arm_3.tscn"
+    },
+    "Triggereffect": {
+        "Fireball": {
+            "EffectType": "Bullet",
+            "BulletPath": "res://game/arms/arm_3_bullet.tscn",
+            "Penetrate": 1,
+            "FlightSpeed": 100,
+            "FlightTime": 2
+        },
+        "Burned": {
+            "EffectType": "buff"
+        }
+    },
+    "data": [
+        {
+            "id": 1,
+            "Name": "IronSpear",
+            "WeaponType": "Spear",
+            "Damage": 8,
+            "Penetrate": 5,
+            "DamageWeaponType": "Physical",
+            "Crit": 1,
+            "CoolDownTime": 3,
+            "Range": 200,
+            "ImagePath": "res://Import/Weapon/Spear/Spear_1/1.png",
+            "TriggerEffect": [],
+            "InitialChoice": true
+        },
+        {
+            "id": 2,
+            "Name": "IronSword",
+            "WeaponType": "Sword",
+            "Penetrate": 1,
+            "Damage": 10,
+            "DamageWeaponType": "Physical",
+            "Crit": 1,
+            "CoolDownTime": 1,
+            "Range": 150,
+            "ImagePath": "res://Import/Weapon/Sword/Sword_1/1.png",
+            "TriggerEffect": [],
+            "InitialChoice": true
+        },
+        {
+            "id": 3,
+            "Name": "IronAxe",
+            "WeaponType": "Axe",
+            "Damage": 15,
+            "Penetrate": 1,
+            "DamageWeaponType": "Physical",
+            "Crit": 1,
+            "CoolDownTime": 1,
+            "Range": 100,
+            "ImagePath": "res://Import/Weapon/Axe/Axe_1/1.png",
+            "TriggerEffect": [],
+            "InitialChoice": true
+        },
+        {
+            "id": 5,
+            "Name": "MuggleWand",
+            "WeaponType": "Staves",
+            "Damage": 14,
+            "Penetrate": 1,
+            "DamageWeaponType": "Magic",
+            "Crit": 1,
+            "CoolDownTime": 1,
+            "Range": 100,
+            "ImagePath": "res://Import/Weapon/Staves/Staves_1/1.png",
+            "TriggerEffect": [
+                "Fireball"
+            ],
+            "InitialChoice": true
+        }
+    ]
+}

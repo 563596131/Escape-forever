@@ -1,0 +1,163 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://font/font_30.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Import/Weapon/ico_ect_set1.png" type="Texture" id=2]
+[ext_resource path="res://Script/weapon_selection.gd" type="Script" id=3]
+[ext_resource path="res://font/font_16.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Import/Weapon/Spear/Spear_1/1.png" type="Texture" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/separation = 39
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 107.0
+margin_right = 1024.0
+margin_bottom = 150.0
+custom_fonts/font = ExtResource( 1 )
+text = "Weapon Select"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 189.0
+margin_right = 1024.0
+margin_bottom = 389.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 200.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 343.0
+margin_right = 493.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 150, 200 )
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+margin_right = 150.0
+margin_bottom = 200.0
+color = Color( 0.643137, 0.643137, 0.643137, 1 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 497.0
+margin_right = 681.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 150, 200 )
+
+[node name="TextureRect" type="NinePatchRect" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+margin_right = 184.0
+margin_bottom = 200.0
+texture = ExtResource( 2 )
+patch_margin_left = 4
+patch_margin_top = 5
+patch_margin_right = 3
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+margin_right = 184.0
+margin_bottom = 200.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 174.0
+margin_bottom = 190.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer/VBoxContainer"]
+margin_right = 164.0
+margin_bottom = 64.0
+
+[node name="armTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 164.0
+margin_bottom = 64.0
+
+[node name="nameLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 96.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 4 )
+text = "Name"
+
+[node name="typeLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 96.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 4 )
+text = "WeaponType"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/MarginContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 164.0
+margin_bottom = 164.0
+custom_fonts/mono_font = ExtResource( 4 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 4 )
+custom_fonts/bold_font = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[color=#f7ff00]伤害 : [/color] [color=#ffffff]10 [/color]
+[color=#f7ff00]暴击 : [/color] [color=#ffffff]1 [/color]
+[color=#f7ff00]冷却 : [/color] [color=#ffffff]1 [/color]
+[color=#f7ff00]范围 : [/color] [color=#ffffff]350 [/color]"
+text = "伤害 :  10 
+暴击 :  1 
+冷却 :  1 
+范围 :  350 "
+fit_content_height = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 428.0
+margin_right = 1024.0
+margin_bottom = 492.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+margin_left = 344.0
+margin_right = 680.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 336, 64 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="armHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2/ScrollContainer"]
+alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -88.0
+margin_top = -55.0
+margin_right = -6.0
+margin_bottom = -6.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
