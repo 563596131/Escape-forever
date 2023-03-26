@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Import/Player1/Walking/Walking_000.png" type="Texture" id=1]
+
+[node name="StartSence" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MarginContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 304.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 300, 600 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+margin_right = 300.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 300, 300 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+margin_top = 304.0
+margin_right = 304.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 300, 300 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer"]
+margin_right = 150.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 150, 300 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 300.0
+
+[node name="Button3" type="Button" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Start"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+margin_top = 54.0
+margin_right = 150.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 150, 50 )
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+margin_top = 108.0
+margin_right = 150.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Setting"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+margin_top = 162.0
+margin_right = 150.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 150, 50 )
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+margin_top = 216.0
+margin_right = 150.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Quit"

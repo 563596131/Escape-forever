@@ -1,0 +1,293 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Import/UI/GameUI/stats_c_1.png" type="Texture" id=1]
+[ext_resource path="res://Import/UI/GameUI/bar_secondary_blue.png" type="Texture" id=2]
+[ext_resource path="res://Import/UI/GameUI/bar_main_red.png" type="Texture" id=3]
+[ext_resource path="res://Scene/main game.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Game_UI/LevelUpgrade.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Game_UI/Attribute.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Import/UI/GameUI/unitframe_avatar_frame.png" type="Texture" id=7]
+[ext_resource path="res://Import/UI/Icon/$.png" type="Texture" id=8]
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Viewport" type="Viewport" parent="MarginContainer"]
+size = Vector2( 1024, 600 )
+size_override_stretch = true
+own_world = true
+
+[node name="Game" parent="MarginContainer/Viewport" instance=ExtResource( 4 )]
+
+[node name="PlayerStateContatiner" type="VBoxContainer" parent="."]
+anchor_right = 0.293
+anchor_bottom = 0.2
+margin_right = -0.0320129
+rect_min_size = Vector2( 300, 120 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlayerState" type="HBoxContainer" parent="PlayerStateContatiner"]
+margin_right = 300.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 300, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PlayerIcon" type="MarginContainer" parent="PlayerStateContatiner/PlayerState"]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="PlayerStateContatiner/PlayerState/PlayerIcon"]
+margin_right = 60.0
+margin_bottom = 60.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="HP&EX" type="VBoxContainer" parent="PlayerStateContatiner/PlayerState"]
+margin_left = 64.0
+margin_right = 300.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 236, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HP" type="TextureProgress" parent="PlayerStateContatiner/PlayerState/HP&EX"]
+margin_right = 236.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 236, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+value = 100.0
+texture_progress = ExtResource( 3 )
+nine_patch_stretch = true
+
+[node name="EX" type="TextureProgress" parent="PlayerStateContatiner/PlayerState/HP&EX"]
+margin_top = 34.0
+margin_right = 236.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 236, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+value = 100.0
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+
+[node name="Money" type="HBoxContainer" parent="PlayerStateContatiner"]
+margin_top = 68.0
+margin_right = 300.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 300, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MoneyIcon" type="TextureRect" parent="PlayerStateContatiner/Money"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="MoneyNumBG" type="TextureRect" parent="PlayerStateContatiner/Money"]
+margin_left = 34.0
+margin_right = 154.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 120, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="MoneyNum" type="Label" parent="PlayerStateContatiner/Money/MoneyNumBG"]
+anchor_left = 0.475
+anchor_top = 0.267
+anchor_right = 0.475
+anchor_bottom = 0.267
+margin_top = -0.0100002
+margin_right = 8.0
+margin_bottom = 13.99
+rect_min_size = Vector2( 8, 14 )
+text = "0"
+align = 1
+
+[node name="LevelUpCotatiner" type="MarginContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="LevelUpCotatiner"]
+margin_right = 1024.0
+margin_bottom = 604.0
+color = Color( 0, 0, 0, 0.541176 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelUpCotatiner"]
+margin_right = 1024.0
+margin_bottom = 604.0
+
+[node name="LevelUpgradeContainer" type="VBoxContainer" parent="LevelUpCotatiner/HBoxContainer"]
+margin_right = 820.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 800, 600 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer"]
+margin_right = 800.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 800, 170 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="LevelUpLabel" type="Label" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer"]
+margin_top = 174.0
+margin_right = 800.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 800, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Level Up !"
+align = 1
+valign = 2
+
+[node name="LevelUpgradeList" type="MarginContainer" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer"]
+margin_top = 208.0
+margin_right = 820.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 800, 396 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList"]
+margin_right = 820.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 820, 350 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="LevelUpgradeContainer" type="HBoxContainer" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer"]
+margin_right = 812.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 800, 350 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="LevelUpgrade" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 200.0
+margin_bottom = 204.0
+
+[node name="LevelUpgrade2" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_right = 404.0
+margin_bottom = 204.0
+
+[node name="LevelUpgrade3" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 408.0
+margin_right = 608.0
+margin_bottom = 204.0
+
+[node name="LevelUpgrade4" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 612.0
+margin_right = 812.0
+margin_bottom = 204.0
+
+[node name="ArributeListContainer" type="MarginContainer" parent="LevelUpCotatiner/HBoxContainer"]
+margin_left = 824.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 200, 600 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer"]
+margin_right = 200.0
+margin_bottom = 600.0
+color = Color( 0.431373, 0.431373, 0.431373, 1 )
+
+[node name="ArributeList" type="VBoxContainer" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer"]
+margin_right = 200.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Attributes"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList"]
+margin_top = 54.0
+margin_right = 200.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 200, 546 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer"]
+margin_right = 200.0
+margin_bottom = 546.0
+
+[node name="ArrtibuteBoxContainer" type="VBoxContainer" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer"]
+margin_right = 200.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 720, 88 )
+
+[node name="Attribute" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 200.0
+margin_bottom = 40.0
+
+[node name="Attribute2" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 200.0
+margin_bottom = 84.0
+
+[node name="Attribute3" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 88.0
+margin_right = 200.0
+margin_bottom = 128.0
+
+[node name="Attribute4" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 132.0
+margin_right = 200.0
+margin_bottom = 172.0

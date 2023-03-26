@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Import/UI/Icon/drop_icon.png" type="Texture" id=1]
+
+[node name="LevelUpgrade" type="MarginContainer"]
+anchor_right = 0.195
+anchor_bottom = 0.333
+margin_right = 0.319992
+margin_bottom = 0.199997
+rect_min_size = Vector2( 200, 200 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 200.0
+margin_bottom = 204.0
+color = Color( 0.478431, 0.478431, 0.478431, 1 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_right = 200.0
+margin_bottom = 204.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 200, 150 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Icon&Describtion" type="HBoxContainer" parent="VBoxContainer2/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 200, 125 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer2/VBoxContainer/Icon&Describtion"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Describtion" type="Label" parent="VBoxContainer2/VBoxContainer/Icon&Describtion"]
+margin_left = 129.0
+margin_top = 38.0
+margin_right = 182.0
+margin_bottom = 86.0
+text = "Blood
+
+Upgrade"
+
+[node name="UpgradeDescribtion" type="Label" parent="VBoxContainer2/VBoxContainer"]
+margin_top = 129.0
+margin_right = 200.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 200, 25 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "HP + 5"
+align = 1
+valign = 1
+
+[node name="ChooseButton" type="Button" parent="VBoxContainer2"]
+margin_top = 158.0
+margin_right = 200.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 200, 46 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Choose"
