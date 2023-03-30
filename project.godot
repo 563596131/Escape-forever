@@ -38,6 +38,11 @@ _global_script_classes=[ {
 "class": "SceneManagerConstants",
 "language": "GDScript",
 "path": "res://addons/scene_manager/SceneManagerConstants.gd"
+}, {
+"base": "Node",
+"class": "TriggerEffect",
+"language": "GDScript",
+"path": "res://Script/communal/trigger_effect.gd"
 } ]
 _global_script_class_icons={
 "Arm": "",
@@ -45,7 +50,8 @@ _global_script_class_icons={
 "GameRoot": "",
 "KinematicComm": "",
 "ReadFile": "",
-"SceneManagerConstants": ""
+"SceneManagerConstants": "",
+"TriggerEffect": ""
 }
 
 [application]
@@ -58,6 +64,7 @@ config/icon="res://Import/Player1/Idle/Idle_000.png"
 
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 OverallSituation="*res://Script/communal/overall_situation.gd"
+Globals="*res://Scene/Globals.tscn"
 
 [display]
 

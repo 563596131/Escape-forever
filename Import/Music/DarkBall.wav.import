@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DarkBall.wav-8af9f154069944d59aaf8f56e1bf9f39.sample"
+
+[deps]
+
+source_file="res://Import/Music/DarkBall.wav"
+dest_files=[ "res://.import/DarkBall.wav-8af9f154069944d59aaf8f56e1bf9f39.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

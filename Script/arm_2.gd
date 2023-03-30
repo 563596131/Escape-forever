@@ -2,6 +2,7 @@ extends Arm
 
 onready var attack_range = find_node("attack_range")
 onready var damage_target = find_node("Area2D")
+var load_hit = "res://Object/Arms/hit/hit_1.tscn"
 var isAttack = true
 
 var lj = 0
@@ -31,6 +32,10 @@ func _physics_process(delta):
 				if lj < max_attack:
 					if i is KinematicComm:
 						oldGoals.append(i)
+						var node = load(load_hit).instance()
+						get_parent().get_parent().add_child(node)
+						node.global_position = i.global_position
+						node.rotation = rotation
 						i.reduceHp(age,Vector2(500*scale.x, 0).rotated(rotation))
 				lj += 1
 		isAttack = false

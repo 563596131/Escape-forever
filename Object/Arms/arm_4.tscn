@@ -1,29 +1,70 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Import/Weapon/Staves/Staves_1/1.png" type="Texture" id=1]
 [ext_resource path="res://Script/arm_4.gd" type="Script" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=90]
+radius = 448.698
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="Animation" id=92]
+resource_name = "attack"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_AnimationPlayer_animation_started"
+}, {
+"args": [ null ],
+"method": "_on_AnimationPlayer_animation_finished"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("a/IcoEctSet:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -48, 48 ), Vector2( -48, 48 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=91]
+radius = 353.277
 
 [node name="arm_4" type="Area2D"]
+z_index = 4096
+monitorable = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 37.9869, 36.4723 )
-shape = SubResource( 1 )
-
-[node name="attack_range" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
-scale = Vector2( 33.0496, 31.6963 )
-shape = SubResource( 2 )
-
-[node name="IcoEctSet" type="Sprite" parent="."]
-position = Vector2( 1, 0 )
-scale = Vector2( 0.214742, 0.190814 )
-texture = ExtResource( 1 )
-flip_h = true
+shape = SubResource( 90 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack = SubResource( 92 )
+
+[node name="attack_range" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+shape = SubResource( 91 )
+
+[node name="a" type="Sprite" parent="."]
+rotation = 0.785398
+scale = Vector2( 0.75, 0.75 )
+flip_h = true
+
+[node name="IcoEctSet" type="Sprite" parent="a"]
+rotation = 2.35655
+scale = Vector2( 0.278038, 0.247867 )
+texture = ExtResource( 1 )
+flip_h = true

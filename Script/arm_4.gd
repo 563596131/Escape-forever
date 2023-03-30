@@ -2,6 +2,7 @@ extends Arm
 
 onready var attack_range = find_node("attack_range")
 onready var damage_target = find_node("Area2D")
+
 var isAttack = true
 
 var lj = 0
@@ -25,15 +26,7 @@ func _physics_process(delta):
 				
 		else:
 			look_at(attack_target.global_position)
-			if attack_target.global_position.x > global_position.x:
 			
-				$IcoEctSet.flip_v = false
-				
-				$IcoEctSet.rotation_degrees = 0
-			else:
-				$IcoEctSet.flip_v = true
-				$IcoEctSet.rotation_degrees = 90
-
 		if attack_target != null:
 			if isAttack:
 				$AnimationPlayer.play("attack")
@@ -72,6 +65,6 @@ func _on_AnimationPlayer_animation_started():
 	gjyx = true
 	lj = 0
 	oldGoals = []
-	#for i in OverallSituation.checkArm["TriggerEffect"]:
-		#TriggerEffect.trigger_effect(i,1,self)
+	for i in OverallSituation.checkArm["TriggerEffect"]:
+		TriggerEffect.trigger_effect(i,1,self)
 	pass # Replace with function body.

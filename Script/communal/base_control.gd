@@ -2,7 +2,7 @@ tool
 class_name BaseControl
 extends Control
 
-signal result_data(value)
+#signal result_data(value)
 
 signal on_click(node)
 signal on_long_click(node)
@@ -15,22 +15,22 @@ export var exit_anim :  Animation = null
 
 export var on_click_anim :  Animation = null
 var baseAnimationPlayer : AnimationPlayer = null
-func _ready():
-	init_anim()
-	playEnter()
+#func _ready():
+#	init_anim()
+#	playEnter()
 
 
-func init_anim():	
-	if enter_anim == null and exit_anim == null :
-		return
-	baseAnimationPlayer = AnimationPlayer.new();
-	if enter_anim != null :
-		baseAnimationPlayer.add_animation("enter",enter_anim)
-	if exit_anim != null :
-		baseAnimationPlayer.add_animation("exit",exit_anim)
-	if on_click_anim != null:
-		baseAnimationPlayer.add_animation("on_click_anim",on_click_anim)
-	add_child(baseAnimationPlayer)
+#func init_anim():	
+#	if enter_anim == null and exit_anim == null :
+#		return
+#	baseAnimationPlayer = AnimationPlayer.new();
+#	if enter_anim != null :
+#		baseAnimationPlayer.add_animation("enter",enter_anim)
+#	if exit_anim != null :
+#		baseAnimationPlayer.add_animation("exit",exit_anim)
+#	if on_click_anim != null:
+#		baseAnimationPlayer.add_animation("on_click_anim",on_click_anim)
+#	add_child(baseAnimationPlayer)
 
 func playEnter()-> AnimationPlayer:
 	if enter_anim != null and baseAnimationPlayer != null :

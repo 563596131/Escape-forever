@@ -8,17 +8,24 @@
     "Triggereffect": {
         "FireBall": {
             "EffectType": "Bullet",
-            "BulletPath": "res://game/arms/arm_4_bullet.tscn",
+            "BulletPath": "res://Object/Arms/arm_4_bullet.tscn",
             "Penetrate": 2,
-            "FlightSpeed": 100,
-            "FlightTime": 2
+            "FlightSpeed": 400,
+            "FlightTime": 3
         },
         "IceBall": {
             "EffectType": "Bullet",
-            "BulletPath": "res://game/arms/arm_4_bullet.tscn",
+            "BulletPath": "res://Object/Arms/arm_4_bullet2.tscn",
             "Penetrate": 1,
-            "FlightSpeed": 200,
-            "FlightTime": 2
+            "FlightSpeed": 300,
+            "FlightTime": 1
+        },
+         "DarkBall": {
+            "EffectType": "Bullet",
+            "BulletPath": "res://Object/Arms/arm_4_bullet3.tscn",
+            "Penetrate": 1,
+            "FlightSpeed": 500,
+            "FlightTime": 8
         },
         "Burned": {
             "EffectType": "buff"
@@ -71,12 +78,12 @@
             "id": 3,
             "Name": "FireWand",
             "WeaponType": "Staves",
-            "Damage": 14,
+            "Damage": 10,
             "Penetrate": 1,
             "DamageWeaponType": "Magic",
             "Crit": 1,
             "AttackSpeed": 1,
-            "Range": 100,
+            "Range": 400,
             "ImagePath": "res://Import/Weapon/Staves/Staves_1/1.png",
             "TriggerEffect": [
                 "FireBall"
@@ -87,16 +94,33 @@
             "id": 4,
             "Name": "IceWand",
             "WeaponType": "Staves",
-            "Damage": 10,
+            "Damage": 5,
             "Penetrate": 1,
             "DamageWeaponType": "Magic",
             "Crit": 1,
-            "AttackSpeed": 1,
-            "Range": 100,
+            "AttackSpeed": 2,
+            "Range": 300,
             "ImagePath": "res://Import/Weapon/Staves/Staves_8/3.png",
             "TriggerEffect": [
                 "IceBall"
             ],
             "InitialChoice": true
-        }    ]
+        },
+        {
+            "id": 5,
+            "Name": "DardWand",
+            "WeaponType": "Staves",
+            "Damage": 20,
+            "Penetrate": 1,
+            "DamageWeaponType": "Magic",
+            "Crit": 1,
+            "AttackSpeed": 0.3,
+            "Range": 500,
+            "ImagePath": "res://Import/Weapon/Staves/Staves_5/4.png",
+            "TriggerEffect": [
+                "DarkBall"
+            ],
+            "InitialChoice": true
+        }
+          ]
 }

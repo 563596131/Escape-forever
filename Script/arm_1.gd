@@ -11,7 +11,7 @@ var isAttack = true
 var lj = 0
 
 
-var load_hit = "res://game/arms/hit/hit_1.tscn"
+var load_hit = "res://Object/Arms/hit/hit_1.tscn"
 func _ready():
 	
 	pass # Replace with function body.
@@ -44,10 +44,10 @@ func _physics_process(delta):
 #					print(i.name)
 					if i is KinematicComm:
 						oldGoals.append(i)
-#						var node = load(load_hit).instance()
-#						get_parent().get_parent().add_child(node)
-#						node.global_position = i.global_position
-#						node.rotation = rotation
+						var node = load(load_hit).instance()
+						get_parent().get_parent().add_child(node)
+						node.global_position = i.global_position
+						node.rotation = rotation
 						i.reduceHp(age,Vector2(500, 0).rotated(rotation))
 						
 				lj += 1

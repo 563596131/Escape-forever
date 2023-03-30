@@ -7,7 +7,7 @@ var ranks = 0
 var data = {}
 var age = 0
 var lj = 0
-var load_hit = "res://game/arms/hit/hit_1.tscn"
+var load_hit = "res://Object/Arms/hit/hit_1.tscn"
 func _ready():
 	speed = data["FlightSpeed"]
 	lj =  data["Penetrate"]
