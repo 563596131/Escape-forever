@@ -12,7 +12,7 @@ var oldGoals = []
 func _ready():
 	age = OverallSituation.checkArm["Damage"]
 	max_attack = OverallSituation.checkArm["Penetrate"]
-	cooling = OverallSituation.checkArm["CoolDownTime"]
+	cooling = OverallSituation.checkArm["AttackSpeed"]
 	IcoEctSet.texture = load(OverallSituation.checkArm["ImagePath"])
 	$AnimationPlayer.playback_speed = cooling
 

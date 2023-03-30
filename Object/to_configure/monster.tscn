@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "Name": "Goblin",
+            "MonsterAttack": 1,
+            "MonsterHp": 5,
+            "MonsterPath":"res://Object/Monster/Goblin.tscn",
+            "MonsterSpeed":60
+        },
+        {
+            "id": 1,
+            "Name": "Goblin2",
+            "MonsterAttack": 2,
+            "MonsterHp": 1,
+            "MonsterPath": "res:///Object/Monster/Goblin2.tscn",
+            "MonsterSpeed": 120
+        },
+        {
+            "id": 2,
+            "Name": "Goblin3",
+            "MonsterAttack": 3,
+            "MonsterHp": 8,
+            "MonsterPath":"res://Object/Monster/Goblin3.tscn",
+            "MonsterSpeed":70
+        },
+        {
+            "id": 3,
+            "Name": "Golem",
+            "MonsterAttack": 5,
+            "MonsterHp": 30,
+            "MonsterPath":"res://Object/Monster/Golem.tscn",
+            "MonsterSpeed":50
+        },
+        {
+            "id": 4,
+            "Name": "Golem2",
+            "MonsterAttack": 7,
+            "MonsterHp": 40,
+            "MonsterPath":"res://Object/Monster/Golem2.tscn",
+            "MonsterSpeed":50
+        },
+        {
+            "id": 5,
+            "Name": "Golem3",
+            "MonsterAttack": 10,
+            "MonsterHp": 60,
+            "MonsterPath":"res://Object/Monster/Golem3.tscn",
+            "MonsterSpeed":40
+        },
+    ]
+}

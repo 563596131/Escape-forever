@@ -3,6 +3,10 @@ extends KinematicComm
 var speed = 150
 
 var velocity = Vector2()
+func _ready():
+	speed = OverallSituation.role["Speed"]
+	hp = OverallSituation.role["Hp"]
+	ranks = 1
 
 func get_input():
 	velocity = Vector2()
@@ -17,6 +21,9 @@ func get_input():
 	velocity = velocity.normalized() * 200
 
 func _physics_process(delta):
+	OverallSituation.hp = hp
+	if hp <= 0 :
+		SceneManager.change_scene("res://Scene/End_sence.tscn",{ "pattern": "squares", "pattern_leave": "squares" })
 	get_input()
 	velocity = move_and_slide(velocity*delta*speed)
 	

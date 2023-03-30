@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "Name": "Knight",
+            "Speed": 150,
+            "Hp": 35,
+            "CharacterIntroduction": "A powerful knight possesses strong physique and strength, capable of wielding a variety of heavy weapons at the same time",
+            "CharacterImage": "res://Import/Player1/Idle/Idle_000.png",
+            "CharacterScene":"res://Object/Player.tscn",
+            "WeaponPot": [0,1,2]
+        },
+        {
+            "id": 2,
+            "Name": "Wizard",
+            "Speed": 200,
+            "Hp": 20,
+            "CharacterIntroduction": "A nimble wizard with a fragile body but the ability to wield powerful spells",
+            "CharacterImage": "res://Import/Player2/Idle/Idle_000.png",
+            "CharacterScene":"res://Object/Player2.tscn",
+            "WeaponPot": [1,3,4]
+        }
+    ]
+}

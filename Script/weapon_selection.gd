@@ -11,13 +11,15 @@ func _ready():
 	$MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2.visible = false
 	$Button.visible = false
 #	var armsData = ReadFile.loadData("res://to_configure/arms.tscn")
-	for i in OverallSituation.armsData.data:
-		if i["InitialChoice"]:
-			var arm = load("res://Object/weapon.tscn").instance()
-			armHBoxContainer.add_child(arm)
-			arm.data = i
-			arm.connect("on_click",self,"on_click")	
-			
+	for i in OverallSituation.role["WeaponPot"]:
+			var armsdata = OverallSituation.armsData.data[i]
+		
+			if armsdata["InitialChoice"]:
+				var arm = load("res://Object/weapon.tscn").instance()
+				armHBoxContainer.add_child(arm)
+				arm.data = armsdata
+				arm.connect("on_click",self,"on_click")	
+	$MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/TextureRect.texture = load(OverallSituation.role["CharacterImage"])
 	pass # Replace with function body.
 	
 func on_click(node):
@@ -35,7 +37,7 @@ func checkArmSet(value):
 	richTextLabel.bbcode_text = "[color=#f7ff00]Damage : [/color] [color=#ffffff]" + str(checkArm["Damage"])+"[/color]\n"
 	if checkArm["Crit"] != 1:
 		richTextLabel.bbcode_text += "[color=#f7ff00]Crit : [/color] [color=#ffffff]" + str(checkArm["Crit"])+"[/color]\n"
-	richTextLabel.bbcode_text += "[color=#f7ff00]CoolDownTime : [/color] [color=#ffffff]" + str(checkArm["CoolDownTime"])+"S[/color]\n"
+	richTextLabel.bbcode_text += "[color=#f7ff00]AttackSpeed : [/color] [color=#ffffff]" + str(checkArm["AttackSpeed"])+"S[/color]\n"
 	richTextLabel.bbcode_text += "[color=#f7ff00]Range : [/color] [color=#ffffff]" + str(checkArm["Range"])+"[/color]\n"
 	if checkArm["TriggerEffect"] != []:
 		richTextLabel.bbcode_text += "[color=#f7ff00]TriggerEffect : [/color]"

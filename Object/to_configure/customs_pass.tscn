@@ -1,0 +1,304 @@
+{
+    "data": [
+        {
+            "name": "LEVEL 1",
+            "MonsterBornID&Num": [
+                [
+                    0,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 2",
+            "MonsterBornID&Num": [
+                [
+                    0,
+                    2
+                ],
+                [
+                    1,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 3",
+            "MonsterBornID&Num": [
+                [
+                    0,
+                    2
+                ],
+                [
+                    2,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 4",
+            "MonsterBornID&Num": [
+                [
+                    0,
+                    2
+                ],
+                [
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 5",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 6",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 7",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    1
+                ],
+                [
+                    1,
+                    2
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 8",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 9",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    2
+                ],
+                [
+                    4,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 10",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    2
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 11",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    2
+                ],
+                [
+                    4,
+                    2
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 12",
+            "MonsterBornID&Num": [
+                [
+                    5,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 13",
+            "MonsterBornID&Num": [
+                [
+                    5,
+                    2
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 14",
+            "MonsterBornID&Num": [
+                [
+                    2,
+                    2
+                ],
+                [
+                    5,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 15",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    2
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
+                    5,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 16",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    3
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
+                    5,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 17",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    5,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 18",
+            "MonsterBornID&Num": [
+                [
+                    3,
+                    2
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    5,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 19",
+            "MonsterBornID&Num": [
+                [
+                    2,
+                    2
+                ],
+                [
+                    3,
+                    2
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    5,
+                    1
+                ]
+            ]
+        },
+        {
+            "name": "LEVEL 20",
+            "MonsterBornID&Num": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    1
+                ],
+                [
+                    3,
+                    1
+                ],
+                [
+                    4,
+                    1
+                ],
+                [
+                    5,
+                    1
+                ]
+            ]
+        }
+    ]
+}

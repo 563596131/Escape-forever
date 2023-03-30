@@ -1,0 +1,230 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://Script/monster.gd" type="Script" id=1]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_001.png" type="Texture" id=2]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_006.png" type="Texture" id=3]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_001.png" type="Texture" id=4]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_010.png" type="Texture" id=5]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_003.png" type="Texture" id=6]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_006.png" type="Texture" id=7]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_009.png" type="Texture" id=8]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_011.png" type="Texture" id=9]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_008.png" type="Texture" id=10]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_000.png" type="Texture" id=11]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_005.png" type="Texture" id=12]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_002.png" type="Texture" id=13]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_004.png" type="Texture" id=14]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_012.png" type="Texture" id=15]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_013.png" type="Texture" id=16]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_005.png" type="Texture" id=17]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_010.png" type="Texture" id=18]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_002.png" type="Texture" id=19]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_007.png" type="Texture" id=20]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_011.png" type="Texture" id=21]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_014.png" type="Texture" id=22]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_004.png" type="Texture" id=23]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_009.png" type="Texture" id=24]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_000.png" type="Texture" id=25]
+[ext_resource path="res://Import/Monster/Goblin3/Running/0_Orc_Running_008.png" type="Texture" id=26]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_007.png" type="Texture" id=27]
+[ext_resource path="res://Import/Monster/Goblin3/Dying/0_Orc_Dying_003.png" type="Texture" id=28]
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 17 ), ExtResource( 3 ), ExtResource( 27 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "death",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "move",
+"speed": 15.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "remote_attack",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "standby",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=54]
+radius = 8.0
+
+[sub_resource type="Animation" id=80]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ) ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "be_attacked"
+length = 0.529
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=129]
+resource_name = "generate"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.2, 0.201, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.12, 0.12 ), Vector2( 0.1, 0.1 ), Vector2( 0.1, 0.1 ), Vector2( 0.08, 0.08 ), Vector2( 0.1, 0.1 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=82]
+radius = 13.0
+
+[sub_resource type="SpriteFrames" id=128]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Goblin3" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1, -21 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 30 )
+animation = "move"
+frame = 8
+playing = true
+offset = Vector2( -3, -22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 54 )
+
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 80 )
+anims/be_attacked = SubResource( 81 )
+anims/generate = SubResource( 129 )
+
+[node name="repelTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 82 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
+pitch_scale = 0.5
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( -2, -8 )
+scale = Vector2( 0.403646, 0.403646 )
+frames = SubResource( 128 )
+speed_scale = 5.0
+playing = true
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
+[connection signal="timeout" from="repelTimer" to="." method="_on_repelTimer_timeout"]
+[connection signal="animation_finished" from="AnimatedSprite2" to="." method="_on_AnimatedSprite2_animation_finished"]

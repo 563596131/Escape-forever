@@ -1,33 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Import/UI/GameUI/stats_c_1.png" type="Texture" id=1]
 [ext_resource path="res://Import/UI/GameUI/bar_secondary_blue.png" type="Texture" id=2]
 [ext_resource path="res://Import/UI/GameUI/bar_main_red.png" type="Texture" id=3]
-[ext_resource path="res://Scene/main game.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Game_UI/Interface.gd" type="Script" id=4]
 [ext_resource path="res://Scene/Game_UI/LevelUpgrade.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Game_UI/Attribute.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Import/UI/GameUI/unitframe_avatar_frame.png" type="Texture" id=7]
 [ext_resource path="res://Import/UI/Icon/$.png" type="Texture" id=8]
+[ext_resource path="res://font/font_30.tres" type="DynamicFont" id=9]
 
 [node name="Interface" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 1.0
 margin_bottom = 1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="Viewport" type="Viewport" parent="MarginContainer"]
-size = Vector2( 1024, 600 )
-size_override_stretch = true
-own_world = true
-
-[node name="Game" parent="MarginContainer/Viewport" instance=ExtResource( 4 )]
 
 [node name="PlayerStateContatiner" type="VBoxContainer" parent="."]
 anchor_right = 0.293
@@ -59,6 +50,12 @@ margin_right = 60.0
 margin_bottom = 60.0
 texture = ExtResource( 7 )
 expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="PlayerStateContatiner/PlayerState/PlayerIcon"]
+margin_right = 60.0
+margin_bottom = 60.0
+expand = true
+stretch_mode = 6
 
 [node name="HP&EX" type="VBoxContainer" parent="PlayerStateContatiner/PlayerState"]
 margin_left = 64.0
@@ -291,3 +288,20 @@ anchor_bottom = 0.0
 margin_top = 132.0
 margin_right = 200.0
 margin_bottom = 172.0
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -52.0
+margin_right = -12.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 43.0
+margin_right = 20.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 9 )

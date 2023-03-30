@@ -7,7 +7,7 @@ onready var AttackTimer = find_node("AttackTimer")
 var velocity = Vector2()
 
 var death = false
-
+#var agg = 0
 var jtjl = Vector2()
 
 var isAttack = true

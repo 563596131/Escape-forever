@@ -51,6 +51,12 @@ margin_right = 150.0
 margin_bottom = 200.0
 color = Color( 0.643137, 0.643137, 0.643137, 1 )
 
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+margin_right = 150.0
+margin_bottom = 200.0
+expand = true
+stretch_mode = 6
+
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
 margin_left = 497.0
 margin_right = 681.0

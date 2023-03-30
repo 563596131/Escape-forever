@@ -1,16 +1,23 @@
 {
     "type": {
-        "Spear": "res://Object/arm_1.tscn",
-        "Sword": "res://Object/arm_2.tscn",
-        "Axe": "res://Object/arm_4.tscn",
-        "Staves": "res://Object/arm_3.tscn"
+        "Spear": "res://Object/Arms/arm_1.tscn",
+        "Sword": "res://Object/Arms/arm_2.tscn",
+        "Axe": "res://Object/Arms/arm_3.tscn",
+        "Staves": "res://Object/Arms/arm_4.tscn"
     },
     "Triggereffect": {
-        "Fireball": {
+        "FireBall": {
             "EffectType": "Bullet",
-            "BulletPath": "res://game/arms/arm_3_bullet.tscn",
-            "Penetrate": 1,
+            "BulletPath": "res://game/arms/arm_4_bullet.tscn",
+            "Penetrate": 2,
             "FlightSpeed": 100,
+            "FlightTime": 2
+        },
+        "IceBall": {
+            "EffectType": "Bullet",
+            "BulletPath": "res://game/arms/arm_4_bullet.tscn",
+            "Penetrate": 1,
+            "FlightSpeed": 200,
             "FlightTime": 2
         },
         "Burned": {
@@ -19,62 +26,77 @@
     },
     "data": [
         {
-            "id": 1,
+            "id": 0,
             "Name": "IronSpear",
             "WeaponType": "Spear",
-            "Damage": 8,
+            "Damage": 5,
             "Penetrate": 5,
             "DamageWeaponType": "Physical",
             "Crit": 1,
-            "CoolDownTime": 3,
+            "AttackSpeed": 4,
             "Range": 200,
             "ImagePath": "res://Import/Weapon/Spear/Spear_1/1.png",
             "TriggerEffect": [],
             "InitialChoice": true
         },
         {
-            "id": 2,
+            "id": 1,
             "Name": "IronSword",
             "WeaponType": "Sword",
             "Penetrate": 1,
             "Damage": 10,
             "DamageWeaponType": "Physical",
             "Crit": 1,
-            "CoolDownTime": 1,
+            "AttackSpeed": 2,
             "Range": 150,
             "ImagePath": "res://Import/Weapon/Sword/Sword_1/1.png",
             "TriggerEffect": [],
             "InitialChoice": true
         },
         {
-            "id": 3,
+            "id": 2,
             "Name": "IronAxe",
             "WeaponType": "Axe",
             "Damage": 15,
             "Penetrate": 1,
             "DamageWeaponType": "Physical",
             "Crit": 1,
-            "CoolDownTime": 1,
+            "AttackSpeed": 1,
             "Range": 100,
             "ImagePath": "res://Import/Weapon/Axe/Axe_1/1.png",
             "TriggerEffect": [],
             "InitialChoice": true
         },
         {
-            "id": 5,
-            "Name": "MuggleWand",
+            "id": 3,
+            "Name": "FireWand",
             "WeaponType": "Staves",
             "Damage": 14,
             "Penetrate": 1,
             "DamageWeaponType": "Magic",
             "Crit": 1,
-            "CoolDownTime": 1,
+            "AttackSpeed": 1,
             "Range": 100,
             "ImagePath": "res://Import/Weapon/Staves/Staves_1/1.png",
             "TriggerEffect": [
-                "Fireball"
+                "FireBall"
             ],
             "InitialChoice": true
-        }
-    ]
+        },
+        {
+            "id": 4,
+            "Name": "IceWand",
+            "WeaponType": "Staves",
+            "Damage": 10,
+            "Penetrate": 1,
+            "DamageWeaponType": "Magic",
+            "Crit": 1,
+            "AttackSpeed": 1,
+            "Range": 100,
+            "ImagePath": "res://Import/Weapon/Staves/Staves_8/3.png",
+            "TriggerEffect": [
+                "IceBall"
+            ],
+            "InitialChoice": true
+        }    ]
 }

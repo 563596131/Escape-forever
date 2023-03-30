@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Escape forever"
-run/main_scene="res://Scene/weapon_selection.tscn"
+run/main_scene="res://Scene/Start_sence.tscn"
 config/icon="res://Import/Player1/Idle/Idle_000.png"
 
 [autoload]

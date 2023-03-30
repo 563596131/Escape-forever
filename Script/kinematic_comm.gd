@@ -15,7 +15,7 @@ func death():
 	pass
 
 func _process(delta):
-	z_index = int(global_position.y)
+#	z_index = int(global_position.y)
 
 	if hp <= 0:
 		death()
