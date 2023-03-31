@@ -24,3 +24,8 @@ func _on_Button2_pressed():
 func _on_Button3_pressed():
 	SceneManager.change_scene("res://Scene/Role_Selection.tscn",{ "pattern": "squares", "pattern_leave": "squares" })
 	pass # Replace with function body.
+
+
+func _on_Button_pressed():
+	SceneManager.change_scene("res://Scene/Credit.tscn",{ "pattern": "squares", "pattern_leave": "squares" })
+	pass # Replace with function body.

@@ -102,5 +102,6 @@ volume_db = -20.0
 
 [node name="MonsterHurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 23 )
+volume_db = -20.0
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

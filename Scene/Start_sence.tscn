@@ -91,4 +91,5 @@ size_flags_vertical = 0
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
