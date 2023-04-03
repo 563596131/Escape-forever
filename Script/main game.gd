@@ -23,6 +23,9 @@ func _ready():
 	
 
 
+	
+
+
 func _on_Timer_timeout():
 	if customs_pass_time > 0:
 		customs_pass_time -= 1
@@ -44,4 +47,15 @@ func _on_Timer_timeout():
 		customs_pass_time = customs_pass_time_max
 		for i in $YSort/monsters.get_children():
 			i.queue_free()
+		$"CanvasLayer/Interface/LevelUpCotatiner".visible = true
+		if OverallSituation.lv >0:
+			$Timer.stop()
+			yield($"CanvasLayer/Interface/LevelUpCotatiner","hide")
+			$Timer.start(1)
+	
+	if customs_pass >= 6:
+		SceneManager.change_scene("res://Scene/Win_sence.tscn",{ "pattern": "squares", "pattern_leave": "squares" })
+	
+
+		
 	pass # Replace with function body.

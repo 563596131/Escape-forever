@@ -187,7 +187,7 @@ position = Vector2( 1, -21 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 30 )
 animation = "move"
-frame = 4
+frame = 11
 playing = true
 offset = Vector2( -3, -22 )
 

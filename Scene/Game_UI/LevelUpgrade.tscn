@@ -50,12 +50,10 @@ expand = true
 
 [node name="Describtion" type="Label" parent="VBoxContainer2/VBoxContainer/Icon&Describtion"]
 margin_left = 129.0
-margin_top = 38.0
+margin_top = 55.0
 margin_right = 182.0
-margin_bottom = 86.0
-text = "Blood
-
-Upgrade"
+margin_bottom = 69.0
+text = "Upgrade"
 
 [node name="UpgradeDescribtion" type="Label" parent="VBoxContainer2/VBoxContainer"]
 margin_top = 129.0

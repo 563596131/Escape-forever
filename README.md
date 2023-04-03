@@ -1,2 +1,3 @@
 # Escape-forever
  
+This is a Rouglike survival game, you only need to choose a character (the two characters have completely different arsenals), and then equip them with a weapon, use WASD to control movement in the game, and try to survive in the increasingly powerful monster tide Just go down. Of course, at the end of each level, you can get the opportunity to strengthen the corresponding ability according to the level, but which ability to choose is all up to you.

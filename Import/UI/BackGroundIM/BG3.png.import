@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fgc1_green_back.png-0b8fed57573f511ece890fca2684f0e8.stex"
+path="res://.import/BG3.png-4ffea0e05b2875e80ad957394d28fd93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Import/UI/Card/fgc1_green_back.png"
-dest_files=[ "res://.import/fgc1_green_back.png-0b8fed57573f511ece890fca2684f0e8.stex" ]
+source_file="res://Import/UI/BackGroundIM/BG3.png"
+dest_files=[ "res://.import/BG3.png-4ffea0e05b2875e80ad957394d28fd93.stex" ]
 
 [params]
 

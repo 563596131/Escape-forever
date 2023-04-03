@@ -1,14 +1,17 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Import/UI/GameUI/stats_c_1.png" type="Texture" id=1]
 [ext_resource path="res://Import/UI/GameUI/bar_secondary_blue.png" type="Texture" id=2]
 [ext_resource path="res://Import/UI/GameUI/bar_main_red.png" type="Texture" id=3]
-[ext_resource path="res://Scene/Game_UI/Interface.gd" type="Script" id=4]
+[ext_resource path="res://Script/Interface.gd" type="Script" id=4]
 [ext_resource path="res://Scene/Game_UI/LevelUpgrade.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scene/Game_UI/Attribute.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Import/UI/GameUI/unitframe_avatar_frame.png" type="Texture" id=7]
-[ext_resource path="res://Import/UI/Icon/$.png" type="Texture" id=8]
+[ext_resource path="res://Import/UI/Icon/fist_icon.png" type="Texture" id=8]
 [ext_resource path="res://font/font_30.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Import/UI/Icon/sword_icon.png" type="Texture" id=10]
+[ext_resource path="res://Import/UI/Icon/storm_icon.png" type="Texture" id=11]
+[ext_resource path="res://Import/UI/Icon/shield_icon.png" type="Texture" id=12]
 
 [node name="Interface" type="Control"]
 anchor_right = 1.0
@@ -94,7 +97,7 @@ rect_min_size = Vector2( 300, 30 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="MoneyIcon" type="TextureRect" parent="PlayerStateContatiner/Money"]
+[node name="SkillIcon" type="TextureRect" parent="PlayerStateContatiner/Money"]
 margin_right = 30.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
@@ -103,7 +106,7 @@ size_flags_vertical = 0
 texture = ExtResource( 8 )
 expand = true
 
-[node name="MoneyNumBG" type="TextureRect" parent="PlayerStateContatiner/Money"]
+[node name="SkillNumBG" type="TextureRect" parent="PlayerStateContatiner/Money"]
 margin_left = 34.0
 margin_right = 154.0
 margin_bottom = 30.0
@@ -113,7 +116,7 @@ size_flags_vertical = 0
 texture = ExtResource( 1 )
 expand = true
 
-[node name="MoneyNum" type="Label" parent="PlayerStateContatiner/Money/MoneyNumBG"]
+[node name="SkillNum" type="Label" parent="PlayerStateContatiner/Money/SkillNumBG"]
 anchor_left = 0.475
 anchor_top = 0.267
 anchor_right = 0.475
@@ -199,6 +202,12 @@ margin_left = 204.0
 margin_right = 404.0
 margin_bottom = 204.0
 
+[node name="Icon" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade2/VBoxContainer2/VBoxContainer/Icon&Describtion" index="0"]
+texture = ExtResource( 10 )
+
+[node name="UpgradeDescribtion" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade2/VBoxContainer2/VBoxContainer" index="1"]
+text = "attack+1"
+
 [node name="LevelUpgrade3" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -206,12 +215,24 @@ margin_left = 408.0
 margin_right = 608.0
 margin_bottom = 204.0
 
+[node name="Icon" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade3/VBoxContainer2/VBoxContainer/Icon&Describtion" index="0"]
+texture = ExtResource( 11 )
+
+[node name="UpgradeDescribtion" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade3/VBoxContainer2/VBoxContainer" index="1"]
+text = "speed + 5"
+
 [node name="LevelUpgrade4" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 612.0
 margin_right = 812.0
 margin_bottom = 204.0
+
+[node name="Icon" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade4/VBoxContainer2/VBoxContainer/Icon&Describtion" index="0"]
+texture = ExtResource( 12 )
+
+[node name="UpgradeDescribtion" parent="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade4/VBoxContainer2/VBoxContainer" index="1"]
+text = "defence + 5"
 
 [node name="ArributeListContainer" type="MarginContainer" parent="LevelUpCotatiner/HBoxContainer"]
 margin_left = 824.0
@@ -275,6 +296,12 @@ margin_top = 44.0
 margin_right = 200.0
 margin_bottom = 84.0
 
+[node name="AttributeImgae" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute2/AttributeContainer" index="0"]
+texture = ExtResource( 10 )
+
+[node name="AttributeDescription" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute2/AttributeContainer" index="1"]
+text = "attack:"
+
 [node name="Attribute3" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -282,12 +309,24 @@ margin_top = 88.0
 margin_right = 200.0
 margin_bottom = 128.0
 
+[node name="AttributeImgae" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute3/AttributeContainer" index="0"]
+texture = ExtResource( 11 )
+
+[node name="AttributeDescription" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute3/AttributeContainer" index="1"]
+text = "speed:"
+
 [node name="Attribute4" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 132.0
 margin_right = 200.0
 margin_bottom = 172.0
+
+[node name="AttributeImgae" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute4/AttributeContainer" index="0"]
+texture = ExtResource( 12 )
+
+[node name="AttributeDescription" parent="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute4/AttributeContainer" index="1"]
+text = "defence:"
 
 [node name="Label2" type="Label" parent="."]
 anchor_left = 0.5
@@ -305,3 +344,17 @@ margin_top = 43.0
 margin_right = 20.0
 margin_bottom = 86.0
 custom_fonts/font = ExtResource( 9 )
+
+[connection signal="pressed" from="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade/VBoxContainer2/ChooseButton" to="." method="_on_ChooseButton_pressed_hp"]
+[connection signal="pressed" from="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade2/VBoxContainer2/ChooseButton" to="." method="_on_ChooseButton_pressed_attack"]
+[connection signal="pressed" from="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade3/VBoxContainer2/ChooseButton" to="." method="_on_ChooseButton_pressed_speed"]
+[connection signal="pressed" from="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade4/VBoxContainer2/ChooseButton" to="." method="_on_ChooseButton_pressed_df"]
+
+[editable path="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade"]
+[editable path="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade2"]
+[editable path="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade3"]
+[editable path="LevelUpCotatiner/HBoxContainer/LevelUpgradeContainer/LevelUpgradeList/ScrollContainer/LevelUpgradeContainer/LevelUpgrade4"]
+[editable path="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute"]
+[editable path="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute2"]
+[editable path="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute3"]
+[editable path="LevelUpCotatiner/HBoxContainer/ArributeListContainer/ArributeList/MarginContainer/ScrollContainer/ArrtibuteBoxContainer/Attribute4"]

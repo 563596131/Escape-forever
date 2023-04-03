@@ -66,6 +66,7 @@ func be_attacked(Attack_angle = Vector2(0,0)):
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "death":
+		OverallSituation.xp += 10
 		queue_free()
 	pass # Replace with function body.
 
